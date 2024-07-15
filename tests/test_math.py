@@ -1,5 +1,5 @@
-from math import example_function
+from math import *
 
 
-def test_example_function():
-    assert example_function() == 2
+def test_gcd():
+    assert gcd(2, 6) == 2
