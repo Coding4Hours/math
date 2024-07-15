@@ -1,4 +1,4 @@
-from math import *
+from maths import *
 
 
 def test_gcd():
