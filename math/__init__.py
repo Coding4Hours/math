@@ -1,10 +1,8 @@
-from math import factorial as fact
-
 def permutations(n : int, k : int) -> int:
-    return fact(n) // fact(n - k)
+    return _fact(n) // _fact(n - k)
 
 def combinations(n : int, k : int) -> int:
-    return fact(n) // (fact(k) * fact(n - k))
+    return _fact(n) // (_fact(k) * _fact(n - k))
 
 def calculate_regions(lines : int) -> int:
     return (lines * (lines + 1)) // 2 + 1
@@ -41,3 +39,9 @@ def gcd(num1 : int, num2 : int) -> int:
 
 def lcm(num1 : int, num2 : int) -> int:
     return abs(num1 * num2) // gcd(num1, num2)
+
+def _fact(n):
+    if n < 2:
+        return 1
+    else:
+        return n * factorial(n-1)
